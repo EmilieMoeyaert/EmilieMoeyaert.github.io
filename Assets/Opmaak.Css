@@ -1,0 +1,833 @@
+/* =====================================================
+   BASIS
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #edf1f4;
+    color: #172b3a;
+    padding-left: 225px;
+}
+
+
+/* =====================================================
+   NAVIGATIE
+===================================================== */
+
+.Navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 225px;
+    height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #102a43 0%,
+        #173f60 100%
+    );
+
+    padding: 38px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.12);
+
+    z-index: 100;
+}
+
+.Navigation::before {
+    content: "CROATIA";
+
+    color: white;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.Navigation button {
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #cbd9e4;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    text-align: left;
+
+    padding: 14px 17px;
+
+    margin-bottom: 5px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.Navigation button:hover {
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    padding-left: 23px;
+}
+
+
+/* =====================================================
+   ALGEMENE PAGINA
+===================================================== */
+
+.Home,
+.section {
+    width: 100%;
+    height: 100vh;
+       max-width: 1150px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: appear 0.35s ease;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   HOME
+   Grote titel + collage
+===================================================== */
+
+.Home {
+
+
+    
+    padding: 55px 65px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+.Home h1 {
+    font-size: 58px;
+
+    line-height: 1.03;
+
+    letter-spacing: -2px;
+
+    font-weight: 700;
+
+    color: #102a43;
+
+    max-width: 600px;
+}
+
+.Home p {
+    position: absolute;
+    left: 65px;
+    top: 25rem;
+  
+
+    margin: 0;
+
+    font-size: 20px;
+    color: #65798a;
+    letter-spacing: 1px;
+}
+
+
+/* Home collage */
+
+.Home::after {
+    content: "";
+
+    position: absolute;
+
+    right: 55px;
+    top: 16%;
+
+    width: 390px;
+    height: 470px;
+
+    background-image: url("/Images/Vlag.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 24px;
+
+    transform: rotate(3deg);
+
+    box-shadow:
+        0 25px 45px rgba(16, 42, 67, 0.18);
+}
+
+
+/* =====================================================
+   TITELS
+===================================================== */
+
+.section h4 {
+    position: absolute;
+
+    font-size: 47px;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+
+    color: #102a43;
+
+    z-index: 5;
+}
+
+
+/* GEEN LIJN ONDER TITELS */
+.section h4::after {
+    display: none;
+}
+
+
+/* =====================================================
+   BASIS TEKST
+===================================================== */
+
+.section li {
+    list-style-position: outside;
+
+    color: #536878;
+
+    line-height: 1.5;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.section > ul,
+.section > ol {
+    background: none;
+
+    box-shadow: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.section > ul > li,
+.section > ol > li {
+    color: #173f60;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   INDEPENDENCE
+   ----------------------------------
+   Titel linksboven
+   Tekst rechts
+   Grote foto links
+===================================================== */
+
+/* =====================================================
+   INDEPENDENCE - FIX
+===================================================== */
+
+.Independence {
+    padding: 65px;
+}
+
+.Independence h4 {
+    top: 65px;
+    left: 65px;
+}
+
+/* Afbeelding */
+.Independence::before {
+    content: "";
+
+    position: absolute;
+
+    left: 65px;
+    top: 150px;
+
+    width: 390px;
+    height: 440px;
+
+    background-image: url("/Images/Independence.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    border-radius: 22px;
+
+    box-shadow: 0 20px 40px rgba(16, 42, 67, 0.17);
+
+    transform: rotate(-2deg);
+}
+
+/* Tekst */
+.Independence ul {
+    position: absolute;
+
+    right: 70px;
+    top: 175px;
+
+    width: 390px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.Independence li {
+    margin-bottom: 24px;
+
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.Independence li::marker {
+    color: darkblue;
+}
+
+.Independence ul::before {
+    content: "LEARNING TO STAND ON MY OWN";
+
+    display: block;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    color: darkblue;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   SOCIABLE
+   ----------------------------------
+   Titel rechts
+   Tekst links
+   Foto collage rechts
+===================================================== */
+
+.Sociable {
+   
+    padding: 65px;
+}
+
+.Sociable h4 {
+    top: 65px;
+    right: 65px;
+}
+
+.Sociable ol {
+    position: absolute;
+
+    left: 85px;
+    top: 190px;
+
+    width: 350px;
+}
+
+.Sociable ol > li {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+    color: #173f60;
+
+    font-weight: 600;
+}
+
+.Sociable ol ul {
+    margin: 10px 0 30px 20px;
+}
+
+.Sociable ol ul li {
+    font-size: 14px;
+
+    color: #647888;
+
+    font-weight: 400;
+}
+
+
+/* collage */
+
+.Sociable::before {
+        content: "";
+
+    position: absolute;
+    right: 70px;
+    top: 155px;
+    width: 400px;
+    height: 200px;
+
+
+    background-image: url("/Images/ImproveE.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 18px;
+
+    border: 7px solid #edf1f4;
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.16);
+
+    transform: rotate(-4deg);
+
+
+   
+}
+
+.Sociable::after {
+
+    content: "";
+
+    position: absolute;
+    right: 245px;
+    top: 365px;
+
+    width: 220px;
+    height: 170px;
+
+
+    background-image: url("/Images/LanguageB.jpg");
+   
+
+    background-size: cover;
+    background-position: center;
+   
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+
+}
+
+
+/* =====================================================
+   MORE SOCIABLE
+   ----------------------------------
+   Centrale tekst
+   Foto's rond de tekst
+===================================================== */
+
+.MoreSociable {
+    padding: 65px;
+}
+
+.MoreSociable h4 {
+    top: 65px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+.MoreSociable ul {
+    position: absolute;
+    top: 185px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 410px;
+    text-align: center;
+    z-index: 5;
+}
+
+.MoreSociable > ul > li {
+    list-style: none;
+    font-size: 19px;
+    color: #173f60;
+    margin-bottom: 30px;
+}
+
+/* Subtekst onder "Surrounded by people" */
+.MoreSociable > ul > li > ul {
+    position: static;
+    transform: none;
+    width: auto;
+
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.MoreSociable > ul > li > ul > li {
+    list-style: none;
+    font-size: 15px;
+    color: #647888;
+    margin: 0;
+}
+
+/* linkerfoto */
+
+.MoreSociable::before {
+    content: "";
+
+    position: absolute;
+
+    left: 70px;
+    top: 175px;
+
+    width: 230px;
+    height: 310px;
+
+    background-image: url("/Images/sociable");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+
+    transform: rotate(-5deg);
+
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+
+/* rechterfoto */
+
+.MoreSociable::after {
+    content: "";
+
+    position: absolute;
+
+    right: 70px;
+    top: 220px;
+
+    width: 230px;
+    height: 310px;
+
+    background-image: url("/Images/comfortzone.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+
+    transform: rotate(5deg);
+
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.Experience {
+    padding: 0;
+}
+
+/* Achtergrond */
+.Experience::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(9, 16, 214, 0.70),
+            rgba(255, 255, 255, 0.25),
+            rgba(156, 22, 53, 0.75)
+        ),
+        url("/Images/Doen-in-Hvar-stad.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: 0;
+}
+
+/* Titel */
+.Experience h4 {
+    position: absolute;
+
+    top: 55px;
+    left: 65px;
+
+    color: white;
+    font-size: 50px;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,0.4);
+
+    z-index: 3;
+}
+
+/* Tekst */
+.Experience ul {
+    position: absolute;
+
+    left: 50%;
+    top: 53%;
+
+    transform: translate(-50%, -50%);
+
+    width: 750px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    padding: 0;
+
+    z-index: 2;
+}
+
+/* Tekstblokken */
+.Experience li {
+    list-style: none;
+
+    color: #102a43;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    padding: 22px 25px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+
+    transition: 0.2s ease;
+}
+
+/* Hover */
+.Experience li:hover {
+    transform: translateY(-4px);
+
+    background: white;
+}
+
+/* Daily life */
+.Experience li:first-child {
+    grid-column: 1 / 3;
+
+    font-size: 30px;
+
+    color: #102a43;
+
+    padding: 18px;
+
+    background: rgba(255,255,255,0.94);
+
+    margin-bottom: 5px;
+}
+
+/* Kolommen => 2 kollomen  */
+.Experience li:last-child {
+    grid-column: 2 / 3;
+}
+
+
+.Me { 
+    padding: 65px;
+
+    background-image:
+        linear-gradient(
+            rgba(237, 241, 244, 0.65),
+            rgba(237, 241, 244, 0.65)
+        ),
+        url("/Images/advent-sibenik-photo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Me h4 {
+    top: 70px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+.Me ul {
+    position: absolute;
+
+    left: 50%;
+    top: 185px;
+
+    transform: translateX(-50%);
+
+    width: 500px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px 35px;
+}
+
+.Me li {
+    list-style: none;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    padding: 18px 15px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 2px solid rgba(16, 42, 67, 0.15);
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transition: 0.25s ease;
+}
+
+.Me li:nth-child(odd) {
+    color: darkblue;
+}
+
+.Me li:nth-child(even) {
+    color: #7d0808;
+}
+
+
+.Me h4{
+    color: darkblue;
+}
+
+.Me::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 75px;
+
+    transform: translateX(-50%);
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #9b7b4d;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    body {
+        padding-left: 0;
+        padding-top: 70px;
+    }
+
+    html,
+    body {
+        overflow: hidden;
+    }
+
+    .Navigation {
+        width: 100%;
+        height: 70px;
+
+        padding: 8px;
+
+        flex-direction: row;
+
+        overflow: hidden;
+    }
+
+    .Navigation::before {
+        display: none;
+    }
+
+    .Navigation button {
+        white-space: nowrap;
+
+        font-size: 13px;
+
+        margin: 0 2px;
+
+        padding: 10px;
+    }
+
+    .Home,
+    .section {
+        height: calc(100vh - 70px);
+    }
+    
+}
+.hidden{
+    display: none;
+}
